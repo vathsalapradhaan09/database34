@@ -1,0 +1,15 @@
+//database
+const mysql = require('mysql2');
+
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    database: 'node-complete',
+    password: 'nodecomplete'
+});
+
+module.exports = pool.promise();
+//path
+const path = require('path');
+
+module.exports = path.dirname(process.mainModule.filename);
